@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+    function show(a){
+        var e = document.getElementById("mainSegment");
+        e.innerHTML = "<object type='text/html' data="+a+" width=1360 height=500>";
+    }
+
+    </script>
+
+</head>
+
+<body style="background-color: #F8F8F8">
+    <nav class="navbar navbar-default">
+	<div class="container">
+    	<div class="navbar-header">
+    		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+    		<a href="menu.html" class="navbar-brand">T-shit lelo</a>
+    	</div>
+    	<div class="collapse navbar-collapse" id="mynavbar">
+	    	<ul class="nav navbar-nav">
+	    		<li><a href="#">Menu</a></li>
+	    		<li><a href="#">Order</a></li>
+	    		<li><a href="#">Bill</a></li>
+	    	</ul>
+
+	    	<ul class="nav navbar-nav navbar-right">
+	    		<li  onclick="show(('login.php'))"><a href="#">Log in</a></li> 
+	    		<li><a href="#">Sign up </a></li>
+	    	</ul>
+    	</div>
+</div>
+    </nav>
+    <div id="mainSegment" style="width:100%; height:90%; background-color:">
+    	<div class="container"  style="padding: 5% 5%">
+    	<div class="jumbotron">
+  <h1>T-shirt wala</h1>
+  <p>T-shit Le lo T-shirt.. <br> 200 ka ek 500 ke 3..<br> T-shirt le lo T-shirt</p>
+  <p><a class="btn btn-primary btn-lg" href="#" role="button">Buy Now</a></p>
+  </div>
+</div>
+    </div>
+</body>
+
+</html>
