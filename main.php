@@ -51,15 +51,15 @@
     	<div class="collapse navbar-collapse" id="mynavbar">
 	    	<ul class="nav navbar-nav">
 	    		<li onclick="show(('menu.php'))"><a href="#">Catalog</a></li>
-	    		<li><a href="#">Order</a></li>
-	    		<li><a href="#">Bill</a></li>
+	    		<!-- <li onclick="show(('dyna_order.php'))"><a href="#">Order</a></li>
+	    		<li onclick="show(('bill.php'))"><a href="#">Bill</a></li> -->
           <li onclick="show(('about-us.html'))"><a href="#">About Us</a></li>
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right">
           <li> <a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" style="padding-top: 15%;"></span></a></li>
-	    		<li  onclick="show(('login.php'))"><a href="#">Log in</a></li> 
-	    		<li  onclick="show(('login.php'))"><a href="#">Sign up </a></li>
+	    		<li  onclick="document.location.href='login.php'"><a href="#">Log in</a></li> 
+                <li  onclick="document.location.href='signup.php'"><a href="#">Sign up </a></li>
 	    	</ul>
     	</div>
 </div>
@@ -72,7 +72,7 @@
         <img src="images/logo.png" alt="Yahan ek logo hua karta tha" style="float: right;">
         <h1 style="font-size: 30pt; font-weight: 800;">The Designers Of The Galaxy</h1>
         <p>T-shirt Le lo T-shirt.. <br> 500 ka ek 1000 ke 2..<br> T-shirt le lo T-shirt <br> Sign up now to get 10% Cashback</p>
-        <p><a class="btn btn-primary btn-lg" role="button" onclick="show(('menu.php'))">Buy Now</a></p>
+        <p><a class="btn btn-success btn-lg" role="button" onclick="show(('menu.php'))">Buy Now</a></p>
       </div>
     </div>
   </div>

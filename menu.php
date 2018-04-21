@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+	
 <script
   src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
   integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
@@ -62,13 +62,13 @@
 	    </div>
 	    <div class="row">  
 	  		<div class="col-lg-4  col-md-6 col-xs-12">
-	        <div class="thumbnail">
-	          <img src="images/t-shirt-avengers-infinity-war.png">
-	          <div class="description">Avengers Infinity War Print T-shirt (M)</div>
-	        <div class="price" > Rs. 499</div>
-	        <button class="btn btn-success btn-block">Add to cart</button>
-	        </div>
-	      </div>
+	        	<div class="thumbnail">
+	          	<img src="images/t-shirt-avengers-infinity-war.png">
+	          	<div class="description">Avengers Infinity War Print T-shirt (M)</div>
+	        	<div class="price" > Rs. 499</div>
+	        	<button class="btn btn-success btn-block">Add to cart</button>
+	        	</div>
+	      	</div>
 	  		<div class="col-lg-4  col-md-6 col-xs-12">
 	        <div class="thumbnail">
 	          <img src="images/t-shirt-avengers-infinity-war.png">

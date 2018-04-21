@@ -12,6 +12,11 @@
 </head>
 <body>
 
+<?php 
+if(!isset($_COOKIE['direct'])){
+	if(!isset($_REQUEST['sub']))
+	{
+?>
 <!--    <form action="" name="f1">
     Username: <input type="text" name="tus"> <br> <br>
     Password: <input type="text" name="tpa"> <br> <br>
@@ -35,14 +40,14 @@
 			      <!-- Username -->
 			      <label class="control-label"  for="username">Username</label>
 			      <div class="controls">
-			        <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+			        <input type="text" id="username" name="tus" placeholder="" class="input-xlarge">
 			      </div>
 			    </div>
 			    <div class="control-group">
 			      <!-- Password-->
 			      <label class="control-label" for="password">Password</label>
 			      <div class="controls">
-			        <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+			        <input type="password" id="password" name="tpa" placeholder="" class="input-xlarge">
 			      </div>
 			      <div class="control-group"> 
 						
@@ -55,13 +60,48 @@
 			
 			    <br> <br>
 	
-			        <button class="btn btn-success btn-lg" value="login">Log  in</button> <br> <br>
-			        <button class="btn btn-success btn-lg" value="sign up">Sign up</button>
+			        <button class="btn btn-success btn-lg" name="sub" value="login">Log  in</button> <br> <br>
+			        <button class="btn btn-success btn-lg"  name="sub" value="sign up">Sign up</button>
 			  </fieldset>
 			</form>
 		</div>
 	</div>
 </div>
+<?php
+}
+	else{
+		$us = $_REQUEST['tus'];
+		$pa = $_REQUEST['tpa'];
+		$sub = $_REQUEST['sub'];
 
+		if($sub=="login"){
+			$link = new mysqli("localhost", "root", "", "dotg");
+			$res = $link->query("select * from login where uname = '$us' and pass='$pa'");
+
+			if($res->num_rows > 0){
+				if(isset($_REQUEST['keep'])){
+					setcookie("direct", "allow", time()+24*30);
+					setcookie("user", $us, time()+24*30);
+				}
+				echo "<br> Authorised User";
+				session_start();
+				$_SESSION['user'] = $us;
+			} else{
+				header("location:login.php");
+			}
+		} else if($sub == "sign up"){
+			$link = new mysqli("localhost","root","","dotg");
+			$link -> query("insert into login vlaues ('$us', '$pa')");
+			$link -> close();
+			header("location:login.php");
+		}
+	}
+}
+	else{
+		session_start();
+		$_SESSION['user'] = $_COOKIE['user'];
+		header("location:order.php");
+	}
+?>
 </body>
 </html>
